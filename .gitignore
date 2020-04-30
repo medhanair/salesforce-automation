@@ -1,2 +1,5 @@
 *.idea
 salesforce-automation.iml
+.classpath
+.project
+.settings/

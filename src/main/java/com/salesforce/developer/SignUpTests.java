@@ -11,11 +11,11 @@ import org.openqa.selenium.WebDriver;
 
 public class SignUpTests
 {
-    final String COUNTRY_CSS = "#country";
+    private static final String COUNTRY_CSS = "#country";
 
     private WebDriver initiateBrowser() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-        final WebDriver driver = (WebDriver)new ChromeDriver();
+        final WebDriver driver = new ChromeDriver();
         final String url = "https://developer.salesforce.com/signup";
         driver.get(url);
         System.out.println("Page is opened");
@@ -33,7 +33,7 @@ public class SignUpTests
         driver.findElement(By.id("email")).sendKeys(new CharSequence[] { "test@gmail.com" });
         new Select(driver.findElement(By.cssSelector("#job_role"))).selectByVisibleText("Developer");
         driver.findElement(By.id("company")).sendKeys(new CharSequence[] { "ABC" });
-        new Select(driver.findElement(By.cssSelector("#country"))).selectByVisibleText("Germany");
+        new Select(driver.findElement(By.cssSelector(COUNTRY_CSS))).selectByVisibleText("Germany");
         driver.findElement(By.cssSelector("#postal_code")).sendKeys(new CharSequence[] { "232323" });
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(new CharSequence[] { RandomStringUtils.randomAlphanumeric(10) + "@gmail.com" });
         driver.findElement(By.id("optin")).click();
@@ -60,7 +60,7 @@ public class SignUpTests
         final Select job_role = new Select(driver.findElement(By.cssSelector("#job_role")));
         job_role.selectByVisibleText("Developer");
         driver.findElement(By.id("company")).sendKeys(new CharSequence[] { "ABC" });
-        final Select country = new Select(driver.findElement(By.cssSelector("#country")));
+        final Select country = new Select(driver.findElement(By.cssSelector(COUNTRY_CSS)));
         country.selectByVisibleText("Germany");
         driver.findElement(By.cssSelector("#postal_code")).sendKeys(new CharSequence[] { "80992" });
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(new CharSequence[] { "mnair@gmail.com" });
@@ -82,7 +82,7 @@ public class SignUpTests
         driver.findElement(By.id("email")).sendKeys(new CharSequence[] { "mnair2489@gmail.com" });
         new Select(driver.findElement(By.cssSelector("#job_role"))).selectByVisibleText("Developer");
         driver.findElement(By.id("company")).sendKeys(new CharSequence[] { "ABC" });
-        new Select(driver.findElement(By.cssSelector("#country"))).selectByVisibleText("Germany");
+        new Select(driver.findElement(By.cssSelector(COUNTRY_CSS))).selectByVisibleText("Germany");
         driver.findElement(By.cssSelector("#postal_code")).sendKeys(new CharSequence[] { "80992" });
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(new CharSequence[] { "mnair@gmail.com" });
         driver.findElement(By.id("optin")).click();
@@ -104,7 +104,7 @@ public class SignUpTests
         driver.findElement(By.id("last_name")).sendKeys(new CharSequence[] { "Nair" });
         new Select(driver.findElement(By.cssSelector("#job_role"))).selectByVisibleText("Developer");
         driver.findElement(By.id("company")).sendKeys(new CharSequence[] { "ABC" });
-        new Select(driver.findElement(By.cssSelector("#country"))).selectByVisibleText("Germany");
+        new Select(driver.findElement(By.cssSelector(COUNTRY_CSS))).selectByVisibleText("Germany");
         driver.findElement(By.cssSelector("#postal_code")).sendKeys(new CharSequence[] { "80992" });
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(new CharSequence[] { "mnair@gmail.com" });
         driver.findElement(By.id("optin")).click();
@@ -126,7 +126,7 @@ public class SignUpTests
         driver.findElement(By.id("email")).sendKeys(new CharSequence[] { "mnair2489gmail.com" });
         new Select(driver.findElement(By.cssSelector("#job_role"))).selectByVisibleText("Developer");
         driver.findElement(By.id("company")).sendKeys(new CharSequence[] { "ABC" });
-        new Select(driver.findElement(By.cssSelector("#country"))).selectByVisibleText("Germany");
+        new Select(driver.findElement(By.cssSelector(COUNTRY_CSS))).selectByVisibleText("Germany");
         driver.findElement(By.cssSelector("#postal_code")).sendKeys(new CharSequence[] { "80992" });
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(new CharSequence[] { "mnair@gmail.com" });
         driver.findElement(By.id("optin")).click();
@@ -146,7 +146,7 @@ public class SignUpTests
         driver.findElement(By.id("last_name")).sendKeys(new CharSequence[] { "Nair" });
         driver.findElement(By.id("email")).sendKeys(new CharSequence[] { "mnair2489@gmail.com" });
         driver.findElement(By.id("company")).sendKeys(new CharSequence[] { "ABC" });
-        new Select(driver.findElement(By.cssSelector("#country"))).selectByVisibleText("Germany");
+        new Select(driver.findElement(By.cssSelector(COUNTRY_CSS))).selectByVisibleText("Germany");
         driver.findElement(By.cssSelector("#postal_code")).sendKeys(new CharSequence[] { "80992" });
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(new CharSequence[] { "mnair@gmail.com" });
         driver.findElement(By.id("optin")).click();
@@ -167,7 +167,7 @@ public class SignUpTests
         driver.findElement(By.id("email")).sendKeys(new CharSequence[] { "mnair@2489gmail.com" });
         new Select(driver.findElement(By.cssSelector("#job_role"))).selectByVisibleText("Developer");
         driver.findElement(By.id("company")).sendKeys(new CharSequence[] { "ABC" });
-        new Select(driver.findElement(By.cssSelector("#country"))).selectByVisibleText("Germany");
+        new Select(driver.findElement(By.cssSelector(COUNTRY_CSS))).selectByVisibleText("Germany");
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(new CharSequence[] { "mnair@gmail.com" });
         driver.findElement(By.id("optin")).click();
         driver.findElement(By.xpath("//div[@id='eula_container']/label[1]")).click();
@@ -186,7 +186,7 @@ public class SignUpTests
         driver.findElement(By.id("last_name")).sendKeys(new CharSequence[] { "Nair" });
         driver.findElement(By.id("email")).sendKeys(new CharSequence[] { "mnair2489@gmail.com" });
         new Select(driver.findElement(By.cssSelector("#job_role"))).selectByVisibleText("Developer");
-        new Select(driver.findElement(By.cssSelector("#country"))).selectByVisibleText("Germany");
+        new Select(driver.findElement(By.cssSelector(COUNTRY_CSS))).selectByVisibleText("Germany");
         driver.findElement(By.cssSelector("#postal_code")).sendKeys(new CharSequence[] { "80992" });
         driver.findElement(By.xpath("//input[@id='username']")).sendKeys(new CharSequence[] { "mnair@gmail.com" });
         driver.findElement(By.id("optin")).click();
@@ -207,7 +207,7 @@ public class SignUpTests
         driver.findElement(By.id("email")).sendKeys(new CharSequence[] { "mnair2489@gmail.com" });
         new Select(driver.findElement(By.cssSelector("#job_role"))).selectByVisibleText("Developer");
         driver.findElement(By.id("company")).sendKeys(new CharSequence[] { "ABC" });
-        new Select(driver.findElement(By.cssSelector("#country"))).selectByVisibleText("Germany");
+        new Select(driver.findElement(By.cssSelector(COUNTRY_CSS))).selectByVisibleText("Germany");
         driver.findElement(By.cssSelector("#postal_code")).sendKeys(new CharSequence[] { "80992" });
         driver.findElement(By.id("optin")).click();
         driver.findElement(By.xpath("//div[@id='eula_container']/label[1]")).click();
