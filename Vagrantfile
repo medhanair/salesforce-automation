@@ -12,6 +12,7 @@ Vagrant.configure("2") do |config|
   config.ssh.password = 'vagrant'
   config.vm.provision "shell", inline: "sudo yum-config-manager --disable dockerrepo"
   config.vm.provision "shell", inline: "sudo yum install firefox -y"
-  config.vm.provision "shell", inline: "sudo yum install java-1.8.0-openjdk"
-  config.vm.provision "shell", inline: "sudo systemctl remove firewalld.service "
+  config.vm.provision "shell", inline: "sudo yum install java-1.8.0-openjdk -y"
+  config.vm.provision "shell", inline: "sudo systemctl stop firewalld.service"
+  config.vm.provision "shell", inline: "sudo systemctl disable firewalld"
 end
