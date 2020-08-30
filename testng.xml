@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/home/medha/test-automation/salesforce-automation">
+        <classes>
+            <class name="com.herokuapp.theinternet.PositiveTest">
+                <methods>
+                    <include name="loginTest" />
+                </methods>
+            </class>
+            <class name="com.rahulshettyacademy.AutomationPractice1">
+                <methods>
+                    <include name="placeOrder" />
+                    <include name="assignment1" />
+                    <include name="assignment2" />
+                    <include name="greenCartArray" />
+                    <include name="assignment3" />
+                    <include name="assignment4" />
+                    <include name="assignment5" />
+                    <include name="assignment6" />
+                    <include name="tableGridExercises" />
+                    <include name="assignment7" />
+                    <include name="Assignment8" />
+                    <include name="coloumnSorting" />
+                    <include name="crossBrowserTest" />
+                </methods>
+            </class>
+            <class name="com.salesforce.developer.PositiveSignupTest">
+                <methods>
+                    <include name="signUpTest" />
+                    <include name="checkFirstNameTest" />
+                    <include name="checkSecondNameTest" />
+                    <include name="checkEmailAddressTest" />
+                    <include name="checkEmalidFormatTest" />
+                    <include name="checkRoleTest" />
+                    <include name="checkPostalcodeTest" />
+                    <include name="checkCompanyTest" />
+                    <include name="checkUsernameTest" />
+                </methods>
+            </class>
+            <class name="com.salesforce.login.SalesforceCreatePersonAccount">
+                <methods>
+                    <include name="createPersonAccount" />
+                    <include name="dataReset" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

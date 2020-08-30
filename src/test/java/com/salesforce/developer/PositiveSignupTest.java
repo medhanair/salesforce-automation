@@ -110,7 +110,7 @@ public class PositiveSignupTest {
 		WebElement signup = driver.findElement(By.id("submit_btn"));
 		signup.click();
 		Assert.assertEquals(
-				driver.findElement(By.xpath("//div[@class='errorContainer']")).getText(),
+				driver.findElement(By.xpath("//form[@id='deorg_form']/div[@class='horizontal_fields']/div[2]/div[@class='fieldError']/div[@class='errorContainer']")).getText(),
 				"The Last Name field is required");
 		driver.quit();
 	}

@@ -15,4 +15,4 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "sudo yum install java-1.8.0-openjdk -y"
   config.vm.provision "shell", inline: "sudo systemctl stop firewalld.service"
   config.vm.provision "shell", inline: "sudo systemctl disable firewalld"
-end
+    end
